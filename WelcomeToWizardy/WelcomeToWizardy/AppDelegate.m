@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "House.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //Create a new house object from the house class
+    House *myHouse = [[House alloc] init];
+    myHouse.numberOfDoors = 2;
+    myHouse.numberOfWindows = 8;
+    myHouse.name = @"York Manor";
+    
+    //Add an address
+    myHouse.address = [[Address alloc] init];
+    myHouse.address.addressLine1 = @"205 Hackberry Ln.";
+    myHouse.address.city = @"Tuscaloosa";
+    myHouse.address.state = @"AL";
+    myHouse.address.zip = @"35487";
+    
+    //Print home information
+    [myHouse printHouseInfo];
+    [myHouse printHouseInfo];
+    
     return YES;
 }
 

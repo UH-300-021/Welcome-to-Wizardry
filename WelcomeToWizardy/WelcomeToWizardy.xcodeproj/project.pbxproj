@@ -14,6 +14,8 @@
 		CDB00F8C1A8177B200EF18C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDB00F8B1A8177B200EF18C7 /* Images.xcassets */; };
 		CDB00F8F1A8177B200EF18C7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDB00F8D1A8177B200EF18C7 /* LaunchScreen.xib */; };
 		CDB00F9B1A8177B200EF18C7 /* WelcomeToWizardyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB00F9A1A8177B200EF18C7 /* WelcomeToWizardyTests.m */; };
+		CDB00FA61A81851600EF18C7 /* House.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB00FA51A81851600EF18C7 /* House.m */; };
+		CDB00FA91A818A7800EF18C7 /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB00FA81A818A7800EF18C7 /* Address.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		CDB00F941A8177B200EF18C7 /* WelcomeToWizardyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WelcomeToWizardyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB00F991A8177B200EF18C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDB00F9A1A8177B200EF18C7 /* WelcomeToWizardyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WelcomeToWizardyTests.m; sourceTree = "<group>"; };
+		CDB00FA41A81851600EF18C7 /* House.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = House.h; sourceTree = "<group>"; };
+		CDB00FA51A81851600EF18C7 /* House.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = House.m; sourceTree = "<group>"; };
+		CDB00FA71A818A7800EF18C7 /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		CDB00FA81A818A7800EF18C7 /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 			children = (
 				CDB00F821A8177B200EF18C7 /* AppDelegate.h */,
 				CDB00F831A8177B200EF18C7 /* AppDelegate.m */,
+				CDB00FAA1A818A9200EF18C7 /* Models */,
 				CDB00F851A8177B200EF18C7 /* ViewController.h */,
 				CDB00F861A8177B200EF18C7 /* ViewController.m */,
 				CDB00F881A8177B200EF18C7 /* Main.storyboard */,
@@ -117,6 +124,17 @@
 				CDB00F991A8177B200EF18C7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CDB00FAA1A818A9200EF18C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CDB00FA41A81851600EF18C7 /* House.h */,
+				CDB00FA51A81851600EF18C7 /* House.m */,
+				CDB00FA71A818A7800EF18C7 /* Address.h */,
+				CDB00FA81A818A7800EF18C7 /* Address.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +239,8 @@
 			files = (
 				CDB00F871A8177B200EF18C7 /* ViewController.m in Sources */,
 				CDB00F841A8177B200EF18C7 /* AppDelegate.m in Sources */,
+				CDB00FA61A81851600EF18C7 /* House.m in Sources */,
+				CDB00FA91A818A7800EF18C7 /* Address.m in Sources */,
 				CDB00F811A8177B200EF18C7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +432,7 @@
 				CDB00FA01A8177B200EF18C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CDB00FA11A8177B200EF18C7 /* Build configuration list for PBXNativeTarget "WelcomeToWizardyTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +441,7 @@
 				CDB00FA31A8177B200EF18C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
