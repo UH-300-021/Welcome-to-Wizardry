@@ -91,7 +91,7 @@ It is not always the case, however that we want no inputs and no outputs. Someti
  -(**returnType**)<code>functionName</code>:(**firstParamType**)**firstParamName** <code>moreOfTheFunctionName</code>:(**secondParamType**)**secondParamName** .... 
 
 ####Return Types
-Return types may be primitive types, like we talked about [last week](https://github.com/UH-300-021/LanguageDay), or objects. If it is an object, remember to add a * after the name. We will get why you need to do this at a later time.
+Return types may be primitive types, like we talked about [in the last lesson](https://github.com/UH-300-021/LanguageDay), or objects. If it is an object, remember to add a * after the name. We will get why you need to do this at a later time.
 
 ```objc
 //Primitive
@@ -104,3 +104,62 @@ Return types may be primitive types, like we talked about [last week](https://gi
 ####Method inputs
 
 Inputs can be primitives or objects as well. You follow the same rules
+
+##Inheritance
+When we model systems, makes sense for something to be contained inside something else. Think about how Houses are contained in Neighborhoods which are contained in Cities, etc. Sometimes, however, we need to build a class that is _a kind of_ another. For instance, a Mansion is a kind of House. So is an Apartment. What makes a Mansion and an Apartment similar may attributes like living space, windows and doors. These are common to all Houses. 
+
+But Mansions and Apartments may differ in that a Mansion has a pool and a basketball court (amongst other things). We would call the Mansion and the Apartment **Subclasses** of House. They **inherit** everything about a house (its properties and methods), but are free to contain additional properties and methods that better describe it.
+
+An example of the Mansion class can be seen below:
+
+ ```objc
+#import "House.h" //Import House so you can inherit from it
+
+@interface Mansion : House 
+
+//Declare properties
+@property Pool *pool;
+@property BasketballCourt *basketballCourt;
+
+//Declare methods here
+- (void)startHouseParty;
+
+@end
+ ```
+
+##Collections
+Keeping track of objects that you have made can sometimes be difficult. Image a situation where you have a lot of objects and you want to list them in a table. Wouldn't it be cool if there were objects that kept track of other objects? Fortunately, there is! These types of objects are called **collections**. The main collection classes we will use are <code>NSArray</code>, <code>NSMutableArray</code>, <code>NSDictionary</code>, and <code>NSMutableDictionary</code>.
+
+###NSArray
+Arrays hold objects and are accessed linearly. Think about it like a number line where each tick on the number line contains an object. Below we will cover how to make an array and how to access its contents.
+
+#####Building an array
+To create an array of strings named "colorsArray", you would write the following:
+
+```objc
+NSArray *colorsArray = [[NSArray alloc] initWithObjects: @"Red", @"Blue", @"Green", nil];
+ ```
+ 
+ We make arrays so often, there is also a way of writing them shorthand. (Highly recommended)
+ ```objc
+NSArray *colorsArray = @[@"Red", @"Blue", @"Green"];
+ ```
+
+A string is just one type of object, but Arrays can hold any kind of object, even an Array! Below we will create an array of house objects.
+
+ ```objc
+ House *house1 = [[House alloc] init];
+ 
+ House *house2 = [[House alloc] init];
+ 
+NSArray *houses = @[house1, house2];
+ ```
+ 
+ #####Accessing Elements in an Array
+To access elements in an array, we use request the object at a specific **index**. The index is like the place on our number line. Array indexes begin at 0, not 1, so <code>house1</code> above is stored at index 0 of the houses array and <code>house2</code> is stored at index 1. An example of accessing them can be seen below:
+
+ ```objc
+ House *house1 = houses[0];
+ 
+ House *house2 = houses[1];
+ ```
