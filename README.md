@@ -163,3 +163,6 @@ To access elements in an array, we use request the object at a specific **index*
  
  House *house2 = houses[1];
  ```
+ 
+###NSDictionary
+Although arrays help us organize our data in a fantastic way, they do not solve every problem. Sometimes we need to have a fast lookup of information based on a key. A great example is handling images. Take an image, say [cat-animal-cute-grass-photo.jpg](http://www.pageresource.com/wallpapers/wallpaper/cats-cute-cat-animal-cute-grass-photo.jpg). This image has a name and some data that makes up image itself. We would say the name is a **key** and the data is a **value**.
